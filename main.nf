@@ -17,7 +17,7 @@ if(params.help) {
 
 process diaUmpire {
     input:
-    file dia_file from file(params.dia_folder)
+    file dia_file from file("${params.dia_folder}/*.mzXML")
     file diau_se_params from file(params.diau_se_params)
 
     output:
